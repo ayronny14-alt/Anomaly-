@@ -1,0 +1,50 @@
+{
+  "name": "@svrn/anomaly",
+  "version": "0.1.0",
+  "description": "Zero-shot anomaly detection — five parallel O(1) engines, no training data, no infrastructure. Point, contextual, drift, changepoint, and collective anomaly detection with ensemble voting.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Aaron Miller",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayronny14-alt/svrn-anomaly.git"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "node":   "./src/index.js"
+    },
+    "./engines/point":       { "import": "./src/engines/point.js" },
+    "./engines/contextual":  { "import": "./src/engines/contextual.js" },
+    "./engines/collective":  { "import": "./src/engines/collective.js" },
+    "./engines/drift":       { "import": "./src/engines/drift.js" },
+    "./engines/changepoint": { "import": "./src/engines/changepoint.js" }
+  },
+  "main": "./src/index.js",
+  "files": ["src/", "LICENSE"],
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest-cli/bin/jest.js"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "keywords": [
+    "anomaly-detection",
+    "time-series",
+    "zero-shot",
+    "streaming",
+    "changepoint",
+    "drift-detection",
+    "adwin",
+    "bayesian",
+    "lempel-ziv",
+    "observability",
+    "monitoring",
+    "alerting",
+    "unsupervised",
+    "online-learning"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
